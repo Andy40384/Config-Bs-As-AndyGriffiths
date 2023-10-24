@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <link rel="stylesheet" href="estilos.css" />
+  <style type="text/css" id="operaUserStyle">
+    video {
+      filter: -opera-shader(url(data:text/plain;base64,dW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmhhbGYzIHBpeGVsKGNvbnN0IGludCB4LCBjb25zdCBpbnQgeSwgaW4gaGFsZjIgeHkpCnsKCXJldHVybiBpQ2h1bmsuZXZhbCh4eSArIGhhbGYyKHgsIHkpKS5yZ2I7Cn0gIAoKaGFsZjMgUkdYKGhhbGYyIHh5KXsKCWhhbGYzIGYgPQoJcGl4ZWwoLTEsLTEsIHh5KSAqICAxLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwtMSwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDEsLTEsIHh5KSAqICAxLiArCgkKCXBpeGVsKC0xLCAwLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwgMCwgeHkpICogLTIuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLCAwLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJCglwaXhlbCgtMSwgMSwgeHkpICogIDEuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAwLCAxLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDEsIDEsIHh5KSAqICAxLgoJOwoJcmV0dXJuIGYgLyAtMjsKfQoKaGFsZjMgUkdYTW9yZShoYWxmMiB4eSl7CgloYWxmMyBmID0KCXBpeGVsKC0xLC0xLCB4eSkgKiAgMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDAsLTEsIHh5KSAqIC0xLiArICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLC0xLCB4eSkgKiAgMS4gKwoJCglwaXhlbCgtMSwgMCwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDAsIDAsIHh5KSAqIC0xLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMSwgMCwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgICAKCQoJcGl4ZWwoLTEsIDEsIHh5KSAqICAxLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwgMSwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLCAxLCB4eSkgKiAgMS4gCgk7CglyZXR1cm4gZiAvIC0xOwp9CgoKaGFsZjQgbWFpbihmbG9hdDIgeHkpCnsKCWhhbGY0IGNvbG9yID0gaUNodW5rLmV2YWwoeHkpOwoJCglpZiAoY29sb3IuYSA8IDEpIHsKCQlyZXR1cm4gY29sb3I7Cgl9CgkKCWlmIChpQ2h1bmtTaXplLnggKiBpQ2h1bmtTaXplLnkgPCBNSU5fQVJFQSkgewoJCXJldHVybiBjb2xvcjsKCX0KCglpZiAoaUNodW5rU2l6ZS55IDwgTUlOX1NUUklQIHx8IGlDaHVua1NpemUueCA8IE1JTl9TVFJJUCkgewoJCXJldHVybiBjb2xvcjsKCX0KCglpZiAoeHkueCA8IE1BUkdJTiB8fCB4eS54ID4gKGlDaHVua1NpemUueCAtIE1BUkdJTikgfHwKCSAgICB4eS55IDwgTUFSR0lOIHx8IHh5LnkgPiAoaUNodW5rU2l6ZS55IC0gTUFSR0lOKSkgewogICAgCXJldHVybiBjb2xvcjsgICAgCiAgICB9CgkKCWlmIChpQ2h1bmtTaXplLnggKiBpQ2h1bmtTaXplLnkgPiBUSFJFU0hPTERfQVJFQSkgewoJCWNvbG9yID0gaGFsZjQoUkdYTW9yZSh4eSksIDEpOwoJfSBlbHNlIHsKCQljb2xvciA9IGhhbGY0KFJHWCh4eSksIDEpOwoJfQoKCXJldHVybiBjb2xvcjsKfQo=));
+    }
+    .navbar-light .navbar-nav .nav-item {
+    color: orange;
+  }
+  </style>
+  <title>Conf Bs As</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #454647">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./img/codoacodo.png" alt="" width="100" height="" style="vertical-align: middle">
+          Conf Bs As
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link"  href="#">La conferencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conviértete en orador</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" href="#" style="color: MediumSeaGreen">Comprar tickets</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="banner text-white" style="text-align: right">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          height: 800px;
+        "
+      >
+        <div class="banner-info col-6">
+          <h5>Conf Bs As</h5>
+          <p>
+            Bs As llega por primera vez a Argentina. Un Evento para compartir
+            con nuestra comunidad el conocimiento y experiencia de los
+            expertos que están creando el futuro de Internet. Ven a conocer a
+            miembres del evento, a otros estudiantes de Codo a Codo y los
+            oradores de primer nivel que tenemos para ti. Te esperamos!
+          </p>
+          <a href="#" class="btn btn-outline-light">Quiero Ser Orador</a>
+          <a href="#" class="btn btn-success">Comprar Ticket</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="oradores"
+      style="margin: 30px; margin-left: 100px; margin-right: 100px"
+    >
+      <h6 class="text-center" style="color: #8d8d8d; font-size: 12px;">CONOCE A LOS</h6>
+      <h3 class="text-center">ORADORES</h3>
+      <div class="row" style="display: flex; justify-content: space-evenly">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="./img/steve.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <span class="badge bg-warning text-dark">JavaScript</span>
+              <span class="badge bg-info text-dark">React</span>
+              <h5 class="card-title">Steve Jobs</h5>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+                quaerat, nam provident praesentium assumenda ullam quia quae
+                nesciunt aut perferendis nulla recusandae sunt odit blanditiis
+                fugit placeat quo ad repudiandae.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="./img/bill.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <span class="badge bg-warning text-dark">JavaScript</span>
+              <span class="badge bg-info text-dark">React</span>
+              <h5 class="card-title">Bill Gates</h5>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+                quaerat, nam provident praesentium assumenda ullam quia quae
+                nesciunt aut perferendis nulla recusandae sunt odit blanditiis
+                fugit placeat quo ad repudiandae.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="./img/ada.jpeg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <span class="badge bg-secondary">Negocios</span>
+              <span class="badge bg-danger">Startups</span>
+              <h5 class="card-title">Ada Lovelace</h5>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+                quaerat, nam provident praesentium assumenda ullam quia quae
+                nesciunt aut perferendis nulla recusandae sunt odit blanditiis
+                fugit placeat quo ad repudiandae.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="conoce-mas">
+      <div class="card bg-dark text-white mb-3">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img
+              src="img/honolulu.jpg"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">Bs As - Octubre</h5>
+              <p class="card-text">
+                Buenos Aires es la provincia y localidad más grande del estado
+                de Argentina, en los Estados Unidos. Honolulu es la más sureña
+                de entre las principales ciudades estadounidenses. Aunque el
+                nombre de Honolulu se refiere al área urbana en la costa
+                sureste de la isla de Oahu, la ciudad y condado de Honolulu
+                han formado una ciudad-condado consolidada que cubre toda la
+                ciudad (aproximadamente 600 km<sup>2</sup> de superficie).
+              </p>
+              <a href="#" class="btn btn-outline-light">Conocé más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formulario">
+      <div class="container">
+        <div style="text-align: center">
+          <span style="color: #8d8d8d; font-size: 12px;">CONVIÉRTETE EN UN</span>
+          <h1>ORADOR</h1>
+          <p>
+            Anótate como orador para dar una charla ignite. Cuéntanos de qué
+            quieres hablar!
+          </p>
+        </div>
+        <form>
+          <div class="row mb-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nombre"
+                aria-label="Nombre"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Apellido"
+                aria-label="Apellido"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <textarea
+                class="form-control"
+                placeholder="Sobre qué quieres hablar?"
+                aria-label="Sobre qué quieres hablar?"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <span>Recuerda incluir un titulo para tu charla.</span>
+            </div>
+          </div>
+          <button type="submit" class="btn mb-3" style="width: 100%; background-color: #96C93E; color: white">
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-image: linear-gradient(to right, #36454F , #1E5371)";
+    >
+      <div class="container">
+        <ul
+          class="navbar-nav"
+          style="justify-content: space-between; width: 100%; bottom: 0;"
+        >
+          <li class="nav-item">
+            <a class="nav-link" href="#">Preguntas Frecuentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Prensa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Conferencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Términos y Condiciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Estudiantes</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+    integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

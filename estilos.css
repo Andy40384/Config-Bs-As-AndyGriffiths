@@ -1,0 +1,31 @@
+.banner {
+    background-image: url("../img/ba1.jpg");
+    background-size: cover;
+    position: relative;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .banner-info {
+    position: relative;
+  }
+  
+  footer {
+    position:relative;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+  }
+  
+  body {
+    margin-bottom: 300px;
+  }
